@@ -1,0 +1,71 @@
+#pip - package manager for python
+#python(phone) --> pip(play store) -->scikit-learn(library)(app)
+#pip install __library_name__
+
+#A feature is an input variable that provides information about one data sample. The model uses these features to learn patterns and make predictions.
+
+#sklearn - library(package) collection of code written by other developers that you can use.
+#    --->
+#datasets - module(inside the library)- provide datasets
+#    --->
+#load_breast_cancer - function that someone at Scikit-learn wrote
+#                    - when we call it , it returs the breast cancer dataset
+
+#pd- just another name for pandas like a variable name
+#Pandas helps us structure and analyze data in a tabular format (DataFrame)
+
+# Training data = The chapters you studied.
+# Test data = The final exam you've never seen before
+
+#data - its not a table ....its a container that is holding the info in it
+
+pd.DataFrame() → Create a DataFrame.
+#data.data → The actual values (569 rows × 30 columns).
+#columns=data.feature_names → Give meaningful names to the columns.
+#df → Variable storing the DataFrame (df is short for DataFrame by convention)
+
+#head() shows the first 5 rows of the DataFrame (by default), along with the column names
+
+print(df.shape)
+#returns (number_of_rows, number_of_columns)
+
+print(df.describe())
+#describe() gives us summary statistics of every numeric column.
+
+print(data.target[:10])
+#the results of 1st 10 targets
+
+# X → Input features (30 columns describing each patient)
+# y → Correct answers (0 = malignant, 1 = benign)
+
+
+#LogisticRegression is the algorithm (the ML model).
+#model is just a variable that stores that algorithm.
+
+X → Input features (30 measurements of each patient)
+
+y → Target labels (0 = malignant, 1 = benign)
+
+test_size=0.2
+20% of the data is used for testing.
+80% of the data is used for training.
+
+random_state=42
+-Ensures the data is split in the same way every time you run the code.
+-42 is just a fixed seed value. It can be any number.
+-Same seed → Same train-test split.
+-No random_state → Different split on each run, so results may change.
+
+Output variables
+X_train → Training features
+X_test → Testing features
+y_train → Training labels
+y_test → Testing labels
+
+
+#fit()= train the  model
+The model learns the relationship (pattern) between the input features (X_train) and the correct labels (y_train). After training, it uses these learned patterns to predict the label of new, unseen data.
+
+Remember this sentence:
+
+Machine Learning = Learning a mapping from X to y.
