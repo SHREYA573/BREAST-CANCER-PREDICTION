@@ -53,4 +53,4 @@ print(y_pred[:10])
 
 from sklearn.metrics import accuracy_score
 accuracy=accuracy_score(y_test,y_pred)
-print(accuracy)
+print("The accuracy of the model is ",accuracy)
